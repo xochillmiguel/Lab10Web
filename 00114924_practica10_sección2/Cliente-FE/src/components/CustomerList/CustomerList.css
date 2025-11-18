@@ -1,0 +1,23 @@
+.customer-list {
+  text-align: center;
+  padding: 20px;
+}
+
+.customer-list h2 {
+  color: var(--c2);
+  margin-bottom: 15px;
+}
+
+.customers-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.customers-table tr:hover {
+  background-color: var(--c1);
+  transition: 0.3s;
+}

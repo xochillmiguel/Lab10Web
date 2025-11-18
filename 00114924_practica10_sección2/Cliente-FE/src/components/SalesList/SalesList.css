@@ -1,0 +1,22 @@
+.sales-list-container {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.sales-table th {
+  background-color: var(--c2);
+  color: white;
+}
+
+.sales-table td,
+.sales-table th {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}

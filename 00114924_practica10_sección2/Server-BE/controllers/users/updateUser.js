@@ -1,4 +1,4 @@
-import { pool } from '../data/connection.js';
+import { pool } from '../../data/connection.js';
 
 export const updateUser = async (req, res) => {
   const id = parseInt(req.params.id);

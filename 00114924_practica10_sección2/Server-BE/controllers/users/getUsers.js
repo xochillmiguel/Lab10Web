@@ -1,4 +1,4 @@
-import { pool } from "../data/connection.js";
+import { pool } from "../../data/connection.js";
 
 export const getUsers = async (req, res) => {
   try {

@@ -1,5 +1,5 @@
-import { pool } from "../data/connection.js";
-import { JWT_SECRET } from "../keys/keys.js";
+import { pool } from "../../data/connection.js";
+import { JWT_SECRET } from "../../keys/keys.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
