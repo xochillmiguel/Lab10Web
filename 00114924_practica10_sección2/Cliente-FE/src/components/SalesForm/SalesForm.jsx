@@ -22,7 +22,7 @@ function SalesForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessage("Venta registrada con éxito ✔");
+        setMessage("La venta fue registrada con éxito ");
         setAmount("");
         setIdCustomer("");
       } else {
@@ -39,12 +39,20 @@ function SalesForm() {
       <h2>Registrar Venta</h2>
       <form className="sales-form" onSubmit={handleSubmit}>
         <label>Monto:</label>
-        <input
+        <input 
           type="number"
           value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (Number(value) >= 0) {
+              setAmount(value);
+            }
+          }}
+          min="0"
+          step="0.01"
           required
         />
+
 
         <label>ID del Cliente:</label>
         <input

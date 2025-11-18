@@ -1,9 +1,9 @@
 :root {
-  --c1: #3ca890; /* más oscuro que #51e4b3 */
-  --c2: #4f54c8; /* más profundo que #757BFF */
-  --c3: #4a99c1; /* más saturado que #75C5EB */
-  --c4: #3f7acb; /* más oscuro que #75A0EB */
-  --c5: #3fc1c7; /* fondo más elegante que #75EAEB */
+  --c1: #3ca890; 
+  --c2: #4f54c8; 
+  --c3: #4a99c1;
+  --c4: #3f7acb; 
+  --c5: #3fc1c7;
 }
 
 body {

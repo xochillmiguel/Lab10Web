@@ -12,7 +12,7 @@ const Login = ({ onLogin }) => {
     try {
       const response = await API.post("/signIn", { email, password });
       localStorage.setItem("token", response.data.token);
-      onLogin(); // Actualiza App.jsx para mostrar home
+      onLogin();
     } catch (err) {
       setError(err.response?.data?.message || "Error en login");
     }

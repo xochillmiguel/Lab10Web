@@ -4,6 +4,8 @@ import "./styles/global.css";
 
 import Home from "./pages/Home/Home.jsx";
 import Login from "./pages/Login/LogIn.jsx";
+import Logout from "./pages/Logout/Logout.jsx";
+
 import CustomerList from "./components/CustomerList/CustomerList.jsx";
 import SalesForm from "./components/SalesForm/SalesForm.jsx";
 import SalesList from "./components/SalesList/SalesList.jsx";
@@ -14,12 +16,17 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("token"));
 
   const handleLogin = () => setIsAuthenticated(true);
+  
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsAuthenticated(false);
+  };
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Login onLogin={handleLogin} />} />
-        <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/" />} />
+        <Route path="/home" element={isAuthenticated ? (<div> <Home /> <Logout onLogout={handleLogout} /> </div>) : <Navigate to="/" />} />
         <Route path="api/customers" element={isAuthenticated ? <CustomerList /> : <Navigate to="/" />} />
         <Route path="/sales/create" element={isAuthenticated ? <SalesForm /> : <Navigate to="/" />} />
         <Route path="/sales" element={isAuthenticated ? <SalesList /> : <Navigate to="/" />} />
